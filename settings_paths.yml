@@ -1,0 +1,3 @@
+
+backups_path: /Important-Storage/Downloads/Untitled Folder/multi-timer-backup-utility/backups
+to_backup_path: /Important-Storage/Downloads/Untitled Folder/multi-timer-backup-utility/to_backup # folder to load backups to (same as the folder that is backed up)
