@@ -11,15 +11,8 @@ import os
 
 # load paths settings
 
-backups_settings_file = "settings_paths.yml"
-backups_path = ""
-to_backup_path = ""
-
-with open(backups_settings_file, 'r') as f:
-   data = yaml.load(f, Loader=yaml.FullLoader)
-
-   backups_path = data['backups_path']
-   to_backup_path = data['to_backup_path']
+backups_path = os.genenv("BACKUPS_PATH", "./backups")
+to_backup_path = os.genenv("TO_BACKUP_PATH", "./to_backup")
 
 
 def loadBackup(backup_filename):
