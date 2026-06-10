@@ -1,7 +1,3 @@
-
-backup_filename = "15:40" # TODO: replace with proper setting
-
-
 import lz4.frame
 import tarfile
 import yaml
@@ -9,10 +5,12 @@ from pathlib import Path
 import shutil
 import os
 
+backup_filename = os.getenv("FILENAME", "hourly")
+
 # load paths settings
 
-backups_path = os.genenv("BACKUPS_PATH", "./backups")
-to_backup_path = os.genenv("TO_BACKUP_PATH", "./to_backup")
+backups_path = os.getenv("BACKUPS_PATH", "./backups")
+to_backup_path = os.getenv("TO_BACKUP_PATH", "./to_backup")
 
 
 def loadBackup(backup_filename):
